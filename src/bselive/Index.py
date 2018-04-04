@@ -61,39 +61,39 @@ class LiveIndex:
 		"""Method for getting S&P BSE MidCap Select Index"""
 	def get_bse_basic_materials():
 		"""Method for getting S&P BSE Basic Materials"""
-	def get_bse_bse_consumer_discretionary_goods_and_services():
+	def get_bse_consumer_discretionary_goods_and_services():
 		"""Method for getting S&P BSE Consumer Discretionary Goods & Services"""
-	def get_bse_bse_energy():
+	def get_bse_energy():
 		"""Method for getting S&P BSE Energy"""
-	def get_bse_bse_fast_moving_consumer_goods():
+	def get_bse_fast_moving_consumer_goods():
 		"""Method for getting S&P BSE Fast Moving Consumer Goods"""
-	def get_bse_bse_finance():
+	def get_bse_finance():
 		"""Method for getting S&P BSE Finance"""
-	def get_bse_bse_healthcare():
+	def get_bse_healthcare():
 		"""Method for getting S&P BSE Healthcare"""
-	def get_bse_bse_industrials():
+	def get_bse_industrials():
 		"""Method for getting S&P BSE Industrials"""
-	def get_bse_bse_information_technology():
+	def get_bse_information_technology():
 		"""Method for getting S&P BSE Information Technology"""
-	def get_bse_bse_telecom():
+	def get_bse_telecom():
 		"""Method for getting S&P BSE Telecom"""
-	def get_bse_bse_utilities():
+	def get_bse_utilities():
 		"""Method for getting S&P BSE Utilities"""
-	def get_bse_bse_auto():
+	def get_bse_auto():
 		"""Method for getting S&P BSE AUTO"""
-	def get_bse_bse_bankex():
+	def get_bse_bankex():
 		"""Method for getting S&P BSE BANKEX"""
-	def get_bse_bse_capital_goods():
+	def get_bse_capital_goods():
 		"""Method for getting S&P BSE CAPITAL GOODS"""
-	def get_bse_bse_consumer_durables():
+	def get_bse_consumer_durables():
 		"""Method for getting S&P BSE CONSUMER DURABLES"""
-	def get_bse_bse_metal():
+	def get_bse_metal():
 		"""Method for getting S&P BSE METAL"""
-	def get_bse_bse_oil_and_gas():
+	def get_bse_oil_and_gas():
 		"""Method for getting S&P BSE OIL & GAS"""
-	def get_bse_bse_power():
+	def get_bse_power():
 		"""Method for getting S&P BSE POWER"""
-	def get_bse_bse_realty():
+	def get_bse_realty():
 		"""Method for getting S&P BSE REALTY"""
-	def get_bse_bse_teck():
+	def get_bse_teck():
 		"""Method for getting S&P BSE TECK"""

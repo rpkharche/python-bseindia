@@ -69,39 +69,39 @@ class TestIndex(unittest.TestCase):
 		"""Unit test for getting S&P BSE MidCap Select Index"""
 	def test_get_bse_basic_materials():
 		"""Unit test for getting S&P BSE Basic Materials"""
-	def test_get_bse_bse_consumer_discretionary_goods_and_services():
+	def test_get_bse_consumer_discretionary_goods_and_services():
 		"""Unit test for getting S&P BSE Consumer Discretionary Goods & Services"""
-	def test_get_bse_bse_energy():
+	def test_get_bse_energy():
 		"""Unit test for getting S&P BSE Energy"""
-	def test_get_bse_bse_fast_moving_consumer_goods():
+	def test_get_bse_fast_moving_consumer_goods():
 		"""Unit test for getting S&P BSE Fast Moving Consumer Goods"""
-	def test_get_bse_bse_finance():
+	def test_get_bse_finance():
 		"""Unit test for getting S&P BSE Finance"""
-	def test_get_bse_bse_healthcare():
+	def test_get_bse_healthcare():
 		"""Unit test for getting S&P BSE Healthcare"""
-	def test_get_bse_bse_industrials():
+	def test_get_bse_industrials():
 		"""Unit test for getting S&P BSE Industrials"""
-	def test_get_bse_bse_information_technology():
+	def test_get_bse_information_technology():
 		"""Unit test for getting S&P BSE Information Technology"""
-	def test_get_bse_bse_telecom():
+	def test_get_bse_telecom():
 		"""Unit test for getting S&P BSE Telecom"""
-	def test_get_bse_bse_utilities():
+	def test_get_bse_utilities():
 		"""Unit test for getting S&P BSE Utilities"""
-	def test_get_bse_bse_auto():
+	def test_get_bse_auto():
 		"""Unit test for getting S&P BSE AUTO"""
-	def test_get_bse_bse_bankex():
+	def test_get_bse_bankex():
 		"""Unit test for getting S&P BSE BANKEX"""
-	def test_get_bse_bse_capital_goods():
+	def test_get_bse_capital_goods():
 		"""Unit test for getting S&P BSE CAPITAL GOODS"""
-	def test_get_bse_bse_consumer_durables():
+	def test_get_bse_consumer_durables():
 		"""Unit test for getting S&P BSE CONSUMER DURABLES"""
-	def test_get_bse_bse_metal():
+	def test_get_bse_metal():
 		"""Unit test for getting S&P BSE METAL"""
-	def test_get_bse_bse_oil_and_gas():
+	def test_get_bse_oil_and_gas():
 		"""Unit test for getting S&P BSE OIL & GAS"""
-	def test_get_bse_bse_power():
+	def test_get_bse_power():
 		"""Unit test for getting S&P BSE POWER"""
-	def test_get_bse_bse_realty():
+	def test_get_bse_realty():
 		"""Unit test for getting S&P BSE REALTY"""
-	def test_get_bse_bse_teck():
+	def test_get_bse_teck():
 		"""Unit test for getting S&P BSE TECK"""

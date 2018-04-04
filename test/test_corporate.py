@@ -25,7 +25,7 @@
 Unit tests for fetching bse corporates data.
 """
 __author__ = "rpkharche@gmail.com(Ravindra Kharche)"
-__copyright__ = "Copyright 2018, pyBSE"
+__copyright__ = "Copyright 2018, python-bseindia"
 __license__ = "MIT"
 __status__ = "Production"
 

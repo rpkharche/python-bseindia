@@ -21,7 +21,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-class Sensex:
-	""" Class to provide access to sensex indices
-	
-	# get S&P BSE SENSEX 50 https://www.bseindia.com/SensexView/SensexViewbackPage.aspx?flag=INDEX&indexcode=98&random=342018fghgfh517
+"""bselive
+Package for fetching live indexes and stock quotes from BSE
+"""
+__author__ = "rpkharche@gmail.com(Ravindra Kharche)"
+__copyright__ = "Copyright 2018, python-bseindia"
+__license__ = "MIT"
+__status__ = "Production"

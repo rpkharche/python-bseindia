@@ -32,28 +32,29 @@ __status__ = "Production"
 import unittest
 
 class TestCorporate(unittest.TestCase):
-	"""Tests for BSE corporates data"""
-	def test_get_listed_securities(self):
-		"""Unit test for downloading listed securities in BSE"""
-		self.assertTrue(validate_csv());
-	def test_get_suspended_securities(self):
-		"""Unit test for downloading suspended securities in BSE"""
-		self.assertTrue(validate_csv());
-	def test_get_delisted_securities(self):
-		"""Unit test for downloading delisted securities in BSE"""
-		self.assertTrue(validate_csv());
-	# Write a common method  for csv validate that provides true/false that asserts tests
-	def validate_csv(self,filename):
+		# Write a common method  for csv validate that provides true/false that asserts tests
+	def validate_csv(self):#,filename):
 		"""function for validating csv file"""
 		# put the code for download csv validation 
 		#   self.assertEqual(
         #    read_data(self.data)[0],
         #    ['Team', 'Games', 'Wins', 'Losses', 'Draws', 'Goals', 'Goals Allowed', 'Points']
         #    )
-		if(valid csv):
-			return True
-		else:
-			return False
+#		if(valid csv):
+#			return True
+#		else:
+		return False
+
+	"""Tests for BSE corporates data"""
+	def test_get_listed_securities(self):
+		"""Unit test for downloading listed securities in BSE"""
+		self.assertTrue(self.validate_csv());
+	def test_get_suspended_securities(self):
+		"""Unit test for downloading suspended securities in BSE"""
+		self.assertTrue(self.validate_csv());
+	def test_get_delisted_securities(self):
+		"""Unit test for downloading delisted securities in BSE"""
+		self.assertTrue(self.validate_csv());
 
 if __name__ == '__main__':
     unittest.main()

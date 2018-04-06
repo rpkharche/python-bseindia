@@ -25,8 +25,9 @@ class LiveIndex:
 	""" Class to provide access to sensex indices
 	"""
 	# get S&P BSE SENSEX 50 https://www.bseindia.com/SensexView/SensexViewbackPage.aspx?flag=INDEX&indexcode=98&random=342018fghgfh517
-		def get_bse_sensex():
+	def get_bse_sensex():
 		"""Method for getting S&P BSE SENSEX"""
+		
 	def get_bse_sensex_50():
 		"""Method for getting S&P BSE SENSEX 50"""
 	def get_bse_sensex_next_50():

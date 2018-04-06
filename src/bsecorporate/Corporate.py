@@ -23,9 +23,9 @@
 
 class Corporate:
 	""" Class to fetch corporate data from bse"""
-	def download_listed_securities(self):
-		"""Unit test for downloading listed securities in BSE"""
-	def download_suspended_securities(self):
-		"""Unit test for downloading suspended securities in BSE"""
-	def download_delisted_securities(self):
-		"""Unit test for downloading delisted securities in BSE"""
+	def download_listed_securities(self,output_filename):
+		"""Method for downloading listed securities in BSE"""
+	def download_suspended_securities(self,output_filename):
+		"""Method for downloading suspended securities in BSE"""
+	def download_delisted_securities(self,output_filename):
+		"""Method for downloading delisted securities in BSE"""

@@ -56,6 +56,7 @@ class LiveIndex:
 		self.BSE_India_Infrastructure_Index = 79
 		self.BSE_CPSE = 80
 		self.BSE_MidCap = 81
+		self.BSE_SmallCap = 82
 		self.BSE_Fast_Moving_Consumer_Goods = 83
 		self.BSE_Healthcare = 84
 		self.BSE_Information_Technology = 85
@@ -90,114 +91,117 @@ class LiveIndex:
 		# Submit Request to BSE Server
 		# SAMPLE Response - bseindia$#$BSE30@S&P_BSE_SENSEX@33608.59@33697.51@33501.37@33626.97@33596.80@30.17@0.09@06_Apr_2018_|_15:59_@2
 		with urllib.request.urlopen(target_url) as f:
-			tokens = f.read().decode("utf-8").split("@")
-			returnval = tokens[5] # Live Value is at 6th position in string. 
+			response = f.read().decode("utf-8")
+			tokens = response.split("@")
+			#print( target_url + response) # debug line
+			returnval = float(tokens[5]) # Live Value is at 6th position in string. 
 		return returnval
 	def get_bse_sensex(self):
 		"""Method for getting S&P BSE SENSEX"""
 		return self.get_value_from_url(self.BSE_SENSEX)
-	def get_bse_sensex_50():
+	def get_bse_sensex_50(self):
 		"""Method for getting S&P BSE SENSEX 50"""
 		return self.get_value_from_url(self.BSE_SENSEX_50)
-	def get_bse_sensex_next_50():
+	def get_bse_sensex_next_50(self):
 		"""Method for getting S&P BSE SENSEX Next 50"""
 		return self.get_value_from_url(self.BSE_SENSEX_Next_50)
-	def get_bse_100():
+	def get_bse_100(self):
 		"""Method for getting S&P BSE 100"""
 		return self.get_value_from_url(self.BSE_100)
-	def get_bse_bharat_22():
+	def get_bse_bharat_22(self):
 		"""Method for getting S&P BSE Bharat 22 Index"""
 		return self.get_value_from_url(self.BSE_Bharat_22_Index)
-	def get_bse_midcap():
+	def get_bse_midcap(self):
 		"""Method for getting S&P BSE MidCap"""
 		return self.get_value_from_url(self.BSE_MidCap)
-	def get_bse_smallcap():
+	def get_bse_smallcap(self):
 		"""Method for getting S&P BSE SmallCap"""
 		return self.get_value_from_url(self.BSE_SmallCap)
-	def get_bse_200():
+	def get_bse_200(self):
 		"""Method for getting S&P BSE 200"""
 		return self.get_value_from_url(self.BSE_200)
-	def get_bse_150_midcap():
+	def get_bse_150_midcap(self):
 		"""Method for getting S&P BSE 150 MidCap Index"""
 		return self.get_value_from_url(self.BSE_150_MidCap_Index)
-	def get_bse_250_smallcap():
+	def get_bse_250_smallcap(self):
 		"""Method for getting S&P BSE 250 SmallCap Index"""
 		return self.get_value_from_url(self.BSE_250_SmallCap_Index)
-	def get_bse_250_largemidcap():
+	def get_bse_250_largemidcap(self):
 		"""Method for getting S&P BSE 250 LargeMidCap Index"""
 		return self.get_value_from_url(self.BSE_250_LargeMidCap_Index)
-	def get_bse_400_midsmallcap():
+	def get_bse_400_midsmallcap(self):
 		"""Method for getting S&P BSE 400 MidSmallCap Index"""
 		return self.get_value_from_url(self.BSE_400_MidSmallCap_Index)
-	def get_bse_500():
+	def get_bse_500(self):
 		"""Method for getting S&P BSE 500"""
 		return self.get_value_from_url(self.BSE_500)
-	def get_bse_allcap():
+	def get_bse_allcap(self):
 		"""Method for getting S&P BSE AllCap"""
 		return self.get_value_from_url(self.BSE_AllCap)
-	def get_bse_largecap():
+	def get_bse_largecap(self):
 		"""Method for getting S&P BSE LargeCap"""
 		return self.get_value_from_url(self.BSE_LargeCap)
-	def get_bse_smallcapselect():
+	def get_bse_smallcapselect(self):
 		"""Method for getting S&P BSE SmallCap Select Index"""
 		return self.get_value_from_url(self.BSE_SmallCap_Select_Index)
-	def get_bse_midcapselect():
+	def get_bse_midcapselect(self):
 		"""Method for getting S&P BSE MidCap Select Index"""
 		return self.get_value_from_url(self.BSE_MidCap_Select_Index)
-	def get_bse_basic_materials():
+	def get_bse_basic_materials(self):
 		"""Method for getting S&P BSE Basic Materials"""
 		return self.get_value_from_url(self.BSE_Basic_Materials)
-	def get_bse_consumer_discretionary_goods_and_services():
+	def get_bse_consumer_discretionary_goods_and_services(self):
 		"""Method for getting S&P BSE Consumer Discretionary Goods & Services"""
 		return self.get_value_from_url(self.BSE_Consumer_Discretionary_Goods_N_Services)
-	def get_bse_energy():
+	def get_bse_energy(self):
 		"""Method for getting S&P BSE Energy"""
 		return self.get_value_from_url(self.BSE_Energy)
-	def get_bse_fast_moving_consumer_goods():
+	def get_bse_fast_moving_consumer_goods(self):
 		"""Method for getting S&P BSE Fast Moving Consumer Goods"""
-	def get_bse_finance():
+		return self.get_value_from_url(self.BSE_Fast_Moving_Consumer_Goods)
+	def get_bse_finance(self):
 		"""Method for getting S&P BSE Finance"""
 		return self.get_value_from_url(self.BSE_Finance)
-	def get_bse_healthcare():
+	def get_bse_healthcare(self):
 		"""Method for getting S&P BSE Healthcare"""
 		return self.get_value_from_url(self.BSE_Healthcare)
-	def get_bse_industrials():
+	def get_bse_industrials(self):
 		"""Method for getting S&P BSE Industrials"""
 		return self.get_value_from_url(self.BSE_Industrials)
-	def get_bse_information_technology():
+	def get_bse_information_technology(self):
 		"""Method for getting S&P BSE Information Technology"""
 		return self.get_value_from_url(self.BSE_Information_Technology)
-	def get_bse_telecom():
+	def get_bse_telecom(self):
 		"""Method for getting S&P BSE Telecom"""
 		return self.get_value_from_url(self.BSE_Telecom)
-	def get_bse_utilities():
+	def get_bse_utilities(self):
 		"""Method for getting S&P BSE Utilities"""
 		return self.get_value_from_url(self.BSE_Utilities)
-	def get_bse_auto():
+	def get_bse_auto(self):
 		"""Method for getting S&P BSE AUTO"""
 		return self.get_value_from_url(self.BSE_AUTO)
-	def get_bse_bankex():
+	def get_bse_bankex(self):
 		"""Method for getting S&P BSE BANKEX"""
 		return self.get_value_from_url(self.BSE_BANKEX)
-	def get_bse_capital_goods():
+	def get_bse_capital_goods(self):
 		"""Method for getting S&P BSE CAPITAL GOODS"""
 		return self.get_value_from_url(self.BSE_CAPITAL_GOODS)
-	def get_bse_consumer_durables():
+	def get_bse_consumer_durables(self):
 		"""Method for getting S&P BSE CONSUMER DURABLES"""
 		return self.get_value_from_url(self.BSE_CONSUMER_DURABLES)
-	def get_bse_metal():
+	def get_bse_metal(self):
 		"""Method for getting S&P BSE METAL"""
 		return self.get_value_from_url(self.BSE_METAL)
-	def get_bse_oil_and_gas():
+	def get_bse_oil_and_gas(self):
 		"""Method for getting S&P BSE OIL & GAS"""
 		return self.get_value_from_url(self.BSE_OIL_N_GAS)
-	def get_bse_power():
+	def get_bse_power(self):
 		"""Method for getting S&P BSE POWER"""
 		return self.get_value_from_url(self.BSE_POWER)
-	def get_bse_realty():
+	def get_bse_realty(self):
 		"""Method for getting S&P BSE REALTY"""
 		return self.get_value_from_url(self.BSE_REALTY)
-	def get_bse_teck():
+	def get_bse_teck(self):
 		"""Method for getting S&P BSE TECK"""
 		return self.get_value_from_url(self.BSE_TECK)
 	
@@ -205,6 +209,41 @@ class LiveIndex:
 if __name__== "__main__":
 	bse_live = LiveIndex()
 	print(bse_live.get_bse_sensex())
+	print(bse_live.get_bse_sensex_50())
+	print(bse_live.get_bse_sensex_next_50())
+	print(bse_live.get_bse_100())
+	print(bse_live.get_bse_bharat_22())
+	print(bse_live.get_bse_midcap())
+	print(bse_live.get_bse_smallcap())
+	print(bse_live.get_bse_200())
+	print(bse_live.get_bse_150_midcap())
+	print(bse_live.get_bse_250_smallcap())
+	print(bse_live.get_bse_250_largemidcap())
+	print(bse_live.get_bse_400_midsmallcap())
+	print(bse_live.get_bse_500())
+	print(bse_live.get_bse_allcap())
+	print(bse_live.get_bse_largecap())
+	print(bse_live.get_bse_smallcapselect())
+	print(bse_live.get_bse_midcapselect())
+	print(bse_live.get_bse_basic_materials())
+	print(bse_live.get_bse_consumer_discretionary_goods_and_services())
+	print(bse_live.get_bse_energy())
+	print(bse_live.get_bse_fast_moving_consumer_goods())
+	print(bse_live.get_bse_finance())
+	print(bse_live.get_bse_healthcare())
+	print(bse_live.get_bse_industrials())
+	print(bse_live.get_bse_information_technology())
+	print(bse_live.get_bse_telecom())
+	print(bse_live.get_bse_utilities())
+	print(bse_live.get_bse_auto())
+	print(bse_live.get_bse_bankex())
+	print(bse_live.get_bse_capital_goods())
+	print(bse_live.get_bse_consumer_durables())
+	print(bse_live.get_bse_metal())
+	print(bse_live.get_bse_oil_and_gas())
+	print(bse_live.get_bse_power())
+	print(bse_live.get_bse_realty())
+	print(bse_live.get_bse_teck())
 	
 '''
 return self.get_value_from_url(self.BSE_PSU)

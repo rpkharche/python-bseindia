@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/rpkharche/python-bseindia.svg?branch=master)](https://travis-ci.org/rpkharche/python-bseindia)
 # python-bseindia
 API for fetching publicly available information from Bombay Stock Exchange website - BSE.
 # What is it?

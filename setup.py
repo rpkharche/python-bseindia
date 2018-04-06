@@ -10,7 +10,7 @@ setup(name='python-bseindia',
       author='Ravindra Kharche',
       author_email='rpkharche@gmail.com',
       license='MIT',
-      packages=['python-bseindia'],
+      packages=['bselive','bsecorporate'],
 	  install_requires=[
           'pytest',
 		  'beautifulsoup4'

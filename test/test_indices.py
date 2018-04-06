@@ -30,11 +30,15 @@ __license__ = "MIT"
 __status__ = "Production"
 
 import unittest
-
+import bselive
 class TestIndex(unittest.TestCase):
 	"""Tests for getting BSE indexes"""
+	def __init__(self ):
+		bse_live = LiveIndex()
 	def test_get_bse_sensex(self):
 		"""Unit test for getting S&P BSE SENSEX"""
+		bse_sensex = bse_live.bse_live.get_bse_sensex()
+		self.assertTrue(isinstance(float,bse_sensex))
 	def test_get_bse_sensex_50(self):
 		"""Unit test for getting S&P BSE SENSEX 50"""
 	def test_get_bse_sensex_next_50(self):

@@ -1,5 +1,0 @@
-{
-  "test/test_corporate.py::TestCorporate::test_get_delisted_securities": true,
-  "test/test_corporate.py::TestCorporate::test_get_listed_securities": true,
-  "test/test_corporate.py::TestCorporate::test_get_suspended_securities": true
-}

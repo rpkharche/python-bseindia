@@ -33,28 +33,57 @@ import unittest
 
 class TestCorporate(unittest.TestCase):
 		# Write a common method  for csv validate that provides true/false that asserts tests
-	def validate_csv(self):#,filename):
-		"""function for validating csv file"""
-		# put the code for download csv validation 
-		#   self.assertEqual(
-        #    read_data(self.data)[0],
-        #    ['Team', 'Games', 'Wins', 'Losses', 'Draws', 'Goals', 'Goals Allowed', 'Points']
-        #    )
-#		if(valid csv):
-#			return True
-#		else:
-		return False
-
+	def get_file_type(self,filename):
+		"""function for getting file type - support xml,csv,txt"""
+		with open(filename, 'rb') as fh:
+			try:
+				xml.sax.parse(fh, xml.sax.ContentHandler()) # try xml parsing 
+				fh.close()
+				return 'xml'
+			except: # SAX' exceptions are not public
+				pass
+			fh.close()
+		with open(filename, 'r') as fh:
+			try:
+				commacount=0
+				count=0
+				for line in csv.reader(fh): # try csv parsing 
+					if count==0:
+						commacount = len(str(line).split(","))
+						if commacount>1:
+							pass
+						else:
+							raise csv.Error
+					else:
+						if commacount == len(str(line).split(",")): # All bse csv are having same number of columns in output
+							pass
+						else:
+							raise csv.Error
+					count+=1
+				fh.close()
+				return 'csv'
+			except csv.Error  as e:
+				pass
+		fh.close()
+		return 'txt' # We are not checking for other formats as we dont need them now. 
 	"""Tests for BSE corporates data"""
-	def test_get_listed_securities(self):
+	def test_download_listed_securities(self):
 		"""Unit test for downloading listed securities in BSE"""
-		self.assertTrue(self.validate_csv());
-	def test_get_suspended_securities(self):
+		#TODO write the code to download the file 
+		listed_securities_file=''
+		self.assertEqual(self.get_file_type(listed_securities_file), 'csv')
+		
+	def test_download_suspended_securities(self):
 		"""Unit test for downloading suspended securities in BSE"""
-		self.assertTrue(self.validate_csv());
-	def test_get_delisted_securities(self):
+		#TODO write the code to download the file 
+		suspended_securities_file=''
+		self.assertEqual(self.get_file_type(suspended_securities_file), 'csv')
+		
+	def test_download_delisted_securities(self):
 		"""Unit test for downloading delisted securities in BSE"""
-		self.assertTrue(self.validate_csv());
+		#TODO write the code to download the file 
+		delisted_securities_file=''
+		self.assertEqual(self.get_file_type(delisted_securities_file), 'csv')
 
 if __name__ == '__main__':
     unittest.main()

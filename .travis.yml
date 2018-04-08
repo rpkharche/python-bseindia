@@ -5,7 +5,8 @@ cache: pip
 install:
   - pip install -U beautifulsoup4
   - pip install pytest-cov
+  - pip install codecov
 script:
   - pytest --cov=./
 after_success:
-  - codecov
+  - codecov -t $CODECOV_TOKEN

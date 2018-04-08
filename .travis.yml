@@ -4,5 +4,8 @@ python:
 cache: pip
 install:
   - pip install -U beautifulsoup4
+  - pip install pytest-cov
 script:
-  - pytest --junitxml reports/results.xml
+  - pytest --cov=./
+after_success:
+  - codecov

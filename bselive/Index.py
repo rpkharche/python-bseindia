@@ -204,7 +204,7 @@ class LiveIndex:
 	def get_bse_teck(self):
 		"""Method for getting S&P BSE TECK"""
 		return self.get_value_from_url(self.BSE_TECK)
-	
+'''	
 # Main Section for trial run	
 if __name__== "__main__":
 	bse_live = LiveIndex()
@@ -245,7 +245,7 @@ if __name__== "__main__":
 	print(bse_live.get_bse_realty())
 	print(bse_live.get_bse_teck())
 	
-'''
+
 return self.get_value_from_url(self.BSE_PSU)
 return self.get_value_from_url(self.BSE_DOLLEX_30)
 return self.get_value_from_url(self.BSE_DOLLEX_200)
